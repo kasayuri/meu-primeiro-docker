@@ -1,0 +1,12 @@
+FROM node:10-slim
+
+LABEL maintainer="Karina <say.karina@hotmail.com>"
+
+WORKDIR /usr/app/hello
+COPY /app/app_node1 .
+
+EXPOSE 3000
+
+RUN npm install
+
+CMD ["node","app.js"]
